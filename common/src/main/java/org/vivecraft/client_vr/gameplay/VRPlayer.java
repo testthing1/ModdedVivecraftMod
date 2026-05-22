@@ -202,7 +202,7 @@ public class VRPlayer {
             this.worldScale *= ScaleHelper.getEntityEyeHeightScale(this.mc.player, ClientUtils.getCurrentPartialTick());
             // limit scale
             // min is minClip + player position indicator offset
-            this.worldScale = Mth.clamp(this.worldScale, 0.025F, 100F);
+            this.worldScale = Mth.clamp(this.worldScale, 0.0F, 1e+36F);
 
             // check that nobody tries to bypass the server set worldscale limit it with a runtime worldscale
             if (this.mc.level != null && this.mc.isLocalServer() &&
