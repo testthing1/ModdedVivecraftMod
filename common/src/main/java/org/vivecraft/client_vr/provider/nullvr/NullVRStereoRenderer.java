@@ -24,8 +24,10 @@ public class NullVRStereoRenderer extends VRRenderer {
 
     @Override
     public Tuple<Integer, Integer> getRenderTextureSizes() {
+        private int XRes = ClientDataHolderVR.getInstance().vrSettings.NullVRXRes;
+        private int YRes = ClientDataHolderVR.getInstance().vrSettings.NullVRYRes;
         if (this.resolution == null) {
-            this.resolution = new Tuple<>(2048, 2048);
+            this.resolution = new Tuple<>(XRes, YRes);
             VRSettings.LOGGER.info("Vivecraft: NullVR Render Res {}x{}", this.resolution.getA(),
                 this.resolution.getB());
             this.ss = -1.0F;

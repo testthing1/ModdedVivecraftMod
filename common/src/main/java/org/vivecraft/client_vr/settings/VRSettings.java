@@ -701,6 +701,10 @@ public class VRSettings {
     public int NullVRXRes = 2048;
     @SettingField(VrOptions.NULLVR_Y_RES)
     public int NullVRYRes = 2048;
+    @SettingField(VrOptions.GUI_RESOLUTION_X)
+    public int GuiResX = 1.0;
+    @SettingField(VrOptions.GUI_RESOLUTION_Y)
+    public int GuiResY = 1.0;
 
     // debug settings
     @SettingField
@@ -1731,7 +1735,7 @@ public class VRSettings {
             }
         },
         SHADER_PATCHING(OptionType.BOOLEAN), // automatic shader patching for known incompatibilites
-        DOUBLE_GUI_RESOLUTION(OptionType.BOOLEAN) { // 1440p GUI
+        DOUBLE_GUI_RESOLUTION(OptionType.BOOLEAN) { // x2 GUI
 
             @Override
             void onOptionChange() {
@@ -1758,7 +1762,7 @@ public class VRSettings {
                 }
             }
         },
-        GUI_SCALE(0, 6, 1, 0) { // GUI Scale
+        GUI_SCALE(0, 18, 1, 0) { // GUI Scale
 
             @Override
             String getDisplayString(String prefix, Object value) {
