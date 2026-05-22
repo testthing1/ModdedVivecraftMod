@@ -692,9 +692,9 @@ public class VRSettings {
     @SettingField(VrOptions.SEARCH_TYPE)
     public boolean useFuzzySearch = true;
     @SettingField(VrOptions.NULLVR_X_RES)
-    public int NullVRXRes = 2048;
+    public int nullVrResolutionX = 2048;
     @SettingField(VrOptions.NULLVR_Y_RES)
-    public int NullVRYRes = 2048;
+    public int nullVrResolutionY = 2048;
     @SettingField
     public boolean disableGarbageCollectorMessage = false;
     @SettingField
@@ -702,9 +702,9 @@ public class VRSettings {
     @SettingField
     public boolean blockIntelWindows = true;
     @SettingField(VrOptions.GUI_RESOLUTION_X)
-    public float GuiResX = 1.0F;
+    public float GuiXMultiplier = 1.0F;
     @SettingField(VrOptions.GUI_RESOLUTION_Y)
-    public float GuiResY = 1.0F;
+    public float GuiYMultiplier = 1.0F;
     @SettingField(VrOptions.GUI_OFFSET_X)
     public float GuiOffsetX = 0.0F;
     @SettingField(VrOptions.GUI_OFFSET_Y)
@@ -712,9 +712,9 @@ public class VRSettings {
     @SettingField(VrOptions.GUI_OFFSET_Z)
     public float GuiOffsetZ = -2.0F;
     @SettingField(VrOptions.GUI_RESOLUTION_X_INT)
-    public int GuiIntResX = 1280;
+    public int GuiXResolution = 1280;
     @SettingField(VrOptions.GUI_RESOLUTION_Y_INT)
-    public int GuiIntResY = 720;
+    public int GuiYResolution = 720;
 
     // debug settings
     @SettingField

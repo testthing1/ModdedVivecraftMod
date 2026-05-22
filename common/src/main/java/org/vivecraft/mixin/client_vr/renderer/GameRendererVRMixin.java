@@ -65,7 +65,7 @@ public abstract class GameRendererVRMixin
     @Unique
     private static final ClientDataHolderVR vivecraft$DATA_HOLDER = ClientDataHolderVR.getInstance();
     @Unique
-    private static final float vivecraft$MIN_CLIP_DISTANCE = 0.02F;
+    private static final float vivecraft$MIN_CLIP_DISTANCE = 0.00001F;
     @Unique
     private Matrix4f vivecraft$thirdPassProjectionMatrix = new Matrix4f();
     @Unique

@@ -173,8 +173,8 @@ public class GuiHandler {
         int oldWidth = GUI_WIDTH;
         int oldHeight = GUI_HEIGHT;
         int oldGuiScale = GUI_SCALE_FACTOR;
-        GUI_WIDTH = (int) (DH.vrSettings.doubleGUIResolution ? (DH.vrSettings.GuiResX*DH.vrSettings.GuiIntResX*2) : (DH.vrSettings.GuiResX*DH.vrSettings.GuiIntResX));
-        GUI_HEIGHT = (int) (DH.vrSettings.doubleGUIResolution ? (DH.vrSettings.GuiResY*DH.vrSettings.GuiIntResY*2) : (DH.vrSettings.GuiResY*DH.vrSettings.GuiIntResY));
+        GUI_WIDTH = (int) (DH.vrSettings.doubleGUIResolution ? (DH.vrSettings.GuiXMultiplier *DH.vrSettings.GuiXResolution *2) : (DH.vrSettings.GuiXMultiplier *DH.vrSettings.GuiXResolution));
+        GUI_HEIGHT = (int) (DH.vrSettings.doubleGUIResolution ? (DH.vrSettings.GuiYMultiplier *DH.vrSettings.GuiYResolution *2) : (DH.vrSettings.GuiYMultiplier *DH.vrSettings.GuiYResolution));
 
         int newGuiScale = DH.vrSettings.doubleGUIResolution ?
             DH.vrSettings.guiScale : (int) Math.ceil(DH.vrSettings.guiScale * 0.5f);

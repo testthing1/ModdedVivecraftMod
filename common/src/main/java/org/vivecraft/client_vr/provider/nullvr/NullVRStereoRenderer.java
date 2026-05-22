@@ -17,8 +17,8 @@ public class NullVRStereoRenderer extends VRRenderer {
 
     private float lastFov = -1;
     private float lastAngle = -1;
-    private int XRes = ClientDataHolderVR.getInstance().vrSettings.NullVRXRes;
-    private int YRes = ClientDataHolderVR.getInstance().vrSettings.NullVRYRes;
+    private int XRes = ClientDataHolderVR.getInstance().vrSettings.nullVrResolutionX;
+    private int YRes = ClientDataHolderVR.getInstance().vrSettings.nullVrResolutionY;
 
     public NullVRStereoRenderer(MCVR vr) {
         super(vr);
