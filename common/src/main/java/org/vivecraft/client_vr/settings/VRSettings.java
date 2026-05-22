@@ -1839,7 +1839,7 @@ public class VRSettings {
                 }
             }
         },
-        MIRROR_CROP(0.0f, 0.25f, 0.01f, -1), // crop amount for mirror,
+        MIRROR_CROP(0.0f, 0.3f, 0.002f, 3), // crop amount for mirror,
         MIRROR_DUAL_SWAP(OptionType.BOOLEAN),
         MIRROR_DUAL_CROP(OptionType.BOOLEAN),
         MIRROR_EYE("vivecraft.options.left", "vivecraft.options.right"), // Mirror Eye
