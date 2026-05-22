@@ -173,8 +173,8 @@ public class GuiHandler {
         int oldWidth = GUI_WIDTH;
         int oldHeight = GUI_HEIGHT;
         int oldGuiScale = GUI_SCALE_FACTOR;
-        GUI_WIDTH = DH.vrSettings.doubleGUIResolution ? 2560 : 1280;
-        GUI_HEIGHT = DH.vrSettings.doubleGUIResolution ? 1440 : 720;
+        GUI_WIDTH = (int) (DH.vrSettings.doubleGUIResolution ? (DH.vrSettings.GuiResX*2560) : (DH.vrSettings.GuiResX*1280));
+        GUI_HEIGHT = (int) (DH.vrSettings.doubleGUIResolution ? (DH.vrSettings.GuiResY*1440) : (DH.vrSettings.GuiResY*720));
 
         int newGuiScale = DH.vrSettings.doubleGUIResolution ?
             DH.vrSettings.guiScale : (int) Math.ceil(DH.vrSettings.guiScale * 0.5f);
@@ -467,10 +467,10 @@ public class GuiHandler {
                 GUI_POS_ROOM = VRPlayer.worldToRoomPos(sourcePosWorld, DH.vrPlayer.vrdata_world_pre);
             } else {
                 // static screens like menu, inventory, and dead.
-                Vector3f offset = new Vector3f(0.0F, 0.0F, -2.0F);
+                Vector3f offset = new Vector3f(DH.vrSettings.GuiOffsetX, DH.vrSettings.GuiOffsetY, DH.vrSettings.GuiOffsetZ);
 
                 if (newScreen instanceof ChatScreen) {
-                    offset.set(0.0F, 0.5F, -2.0F);
+                    offset.set(DH.vrSettings.GuiOffsetX, (DH.vrSettings.GuiOffsetY+0.5), -2.0F);
                 } else if (newScreen instanceof BookEditScreen || newScreen instanceof AbstractSignEditScreen) {
                     offset.set(0.0F, 0.25F, -2.0F);
                 }

@@ -702,9 +702,15 @@ public class VRSettings {
     @SettingField(VrOptions.NULLVR_Y_RES)
     public int NullVRYRes = 2048;
     @SettingField(VrOptions.GUI_RESOLUTION_X)
-    public int GuiResX = 1.0;
+    public float GuiResX = 1.0;
     @SettingField(VrOptions.GUI_RESOLUTION_Y)
-    public int GuiResY = 1.0;
+    public float GuiResY = 1.0;
+    @SettingField(VrOptions.GUI_OFFSET_X)
+    public float GuiOffsetX = 0.0;
+    @SettingField(VrOptions.GUI_OFFSET_Y)
+    public float GuiOffsetY = 0.0;
+    @SettingField(VrOptions.GUI_OFFSET_Z)
+    public float GuiOffsetZ = -2.0;
 
     // debug settings
     @SettingField
@@ -2174,7 +2180,7 @@ public class VRSettings {
         TOUCH_HOTBAR(OptionType.BOOLEAN), // Touch Hotbar Enabled
         PLAY_MODE_SEATED("vivecraft.options.seated", "vivecraft.options.standing"), // Play Mode
         VR_HOTSWITCH(OptionType.BOOLEAN),
-        RENDER_SCALEFACTOR(0.1f, 9f, 0.1f, 0) { // Resolution
+        RENDER_SCALEFACTOR(0.05f, 16f, 0.05f, 0) { // Resolution
 
             @Override
             String getDisplayString(String prefix, Object value) {
@@ -2514,8 +2520,10 @@ public class VRSettings {
         NULLVR_IPD(0F, 0.2F, 0.001F, 3),
         NULLVR_EYE_ANGLE(0F, 25F, 0.5F, 1),
         NULLVR_FOV(20F, 130F, 1F, 0);
-        NULLVR_X_RES(1, 2048, 1, 0);
-        NULLVR_Y_RES(1, 2048, 1, 0)
+        NULLVR_X_RES(1F, 2048F, 1F, 0);
+        NULLVR_Y_RES(1F, 2048F, 1F, 0);
+        GUI_RESOLUTION_X(0.25F, 3F, 0.25F, 0);
+        GUI_RESOLUTION_Y(0.25F, 3F, 0.25F, 0);
         private final OptionType type;
         private final float valueStep;
         private final float valueMin;
