@@ -11,7 +11,12 @@ public class GuiRenderingSettings extends GuiVROptionsBase {
         new VROptionEntry(VRSettings.VrOptions.GUI_MIPMAPS),
         new VROptionEntry(VRSettings.VrOptions.GUI_SCALE),
         new VROptionEntry(VRSettings.VrOptions.GUI_ANISOTROPIC_FILTERING),
-        new VROptionEntry(VRSettings.VrOptions.HUD_MAX_GUI_SCALE)
+        new VROptionEntry(VRSettings.VrOptions.HUD_MAX_GUI_SCALE),
+        new VROptionEntry(VRSettings.VrOptions.GUI_RESOLUTION_X),
+        new VROptionEntry(VRSettings.VrOptions.GUI_RESOLUTION_Y),
+        new VROptionEntry(VRSettings.VrOptions.GUI_OFFSET_X),
+        new VROptionEntry(VRSettings.VrOptions.GUI_OFFSET_Y),
+        new VROptionEntry(VRSettings.VrOptions.GUI_OFFSET_Z),
     };
 
     public GuiRenderingSettings(Screen lastScreen) {
