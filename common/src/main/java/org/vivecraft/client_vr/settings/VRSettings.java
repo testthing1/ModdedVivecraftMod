@@ -697,6 +697,10 @@ public class VRSettings {
     public boolean selfButtSparklesInFirstPerson = false;
     @SettingField
     public boolean blockIntelWindows = true;
+    @SettingField(VrOptions.NULLVR_X_RES)
+    public int NullVRXRes = 2048;
+    @SettingField(VrOptions.NULLVR_Y_RES)
+    public int NullVRYRes = 2048;
 
     // debug settings
     @SettingField
@@ -2503,9 +2507,11 @@ public class VRSettings {
             }
         },
         NULLVR_HAPTICS(OptionType.BOOLEAN),
-        NULLVR_IPD(0.05F, 0.2F, 0.001F, 3),
+        NULLVR_IPD(0F, 0.2F, 0.001F, 3),
         NULLVR_EYE_ANGLE(0F, 25F, 0.5F, 1),
-        NULLVR_FOV(50F, 120F, 1F, 0);
+        NULLVR_FOV(20F, 130F, 1F, 0);
+        NULLVR_X_RES(1, 2048, 1, 0);
+        NULLVR_Y_RES(1, 2048, 1, 0)
         private final OptionType type;
         private final float valueStep;
         private final float valueMin;
