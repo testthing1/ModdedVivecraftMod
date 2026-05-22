@@ -695,6 +695,12 @@ public class VRSettings {
     public int NullVRXRes = 2048;
     @SettingField(VrOptions.NULLVR_Y_RES)
     public int NullVRYRes = 2048;
+    @SettingField
+    public boolean disableGarbageCollectorMessage = false;
+    @SettingField
+    public boolean selfButtSparklesInFirstPerson = false;
+    @SettingField
+    public boolean blockIntelWindows = true;
     @SettingField(VrOptions.GUI_RESOLUTION_X)
     public float GuiResX = 1.0F;
     @SettingField(VrOptions.GUI_RESOLUTION_Y)
@@ -705,12 +711,10 @@ public class VRSettings {
     public float GuiOffsetY = 0.0F;
     @SettingField(VrOptions.GUI_OFFSET_Z)
     public float GuiOffsetZ = -2.0F;
-    @SettingField
-    public boolean disableGarbageCollectorMessage = false;
-    @SettingField
-    public boolean selfButtSparklesInFirstPerson = false;
-    @SettingField
-    public boolean blockIntelWindows = true;
+    @SettingField(VrOptions.GUI_RESOLUTION_X_INT)
+    public int GuiIntResX = 1280;
+    @SettingField(VrOptions.GUI_RESOLUTION_Y_INT)
+    public int GuiIntResY = 720;
 
     // debug settings
     @SettingField
@@ -2522,11 +2526,13 @@ public class VRSettings {
         NULLVR_FOV(20F, 130F, 1F, 0),
         NULLVR_X_RES(1F, 2048F, 1F, 0),
         NULLVR_Y_RES(1F, 2048F, 1F, 0),
-        GUI_RESOLUTION_X(0.25F, 3F, 0.25F, 2),
-        GUI_RESOLUTION_Y(0.25F, 3F, 0.25F, 2),
+        GUI_RESOLUTION_X(0.1666666666667F, 3F, 0.1666666666667F, 2),
+        GUI_RESOLUTION_Y(0.1666666666667F, 3F, 0.1666666666667F, 2),
         GUI_OFFSET_X(-2F, 2F, 0.25F, 2),
         GUI_OFFSET_Y(-2F, 2F, 0.25F, 2),
-        GUI_OFFSET_Z(-4F, 0F, 0.25F, 2);
+        GUI_OFFSET_Z(-4F, 0F, 0.25F, 2),
+        GUI_RESOLUTION_X_INT(1280, 1920, 160, 0),
+        GUI_RESOLUTION_Y_INT(720, 1080, 90, 0);
         private final OptionType type;
         private final float valueStep;
         private final float valueMin;

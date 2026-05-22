@@ -51,8 +51,6 @@ public class GuiAllSettings extends GuiListScreen {
         // keyboard theme editor
         entries.add(new SettingsList.ScreenEntry(
             "vivecraft.options.screen.customkeyboardthemeeditor", GuiKeyboardThemeEditor::new));
-        entries.add(SettingsList.vrOptionToEntry(VRSettings.VrOptions.NULLVR_X_RES));
-        entries.add(SettingsList.vrOptionToEntry(VRSettings.VrOptions.NULLVR_Y_RES));
 
         // server settings
         for (ConfigBuilder.ConfigValue<?> cv : ServerConfig.getConfigValues()) {
