@@ -20,7 +20,7 @@ public class GuiRenderOpticsSettings extends GuiVROptionsBase {
         VRSettings.VrOptions.HANDHELD_CAMERA_RENDER_SCALE,
         VRSettings.VrOptions.HANDHELD_CAMERA_FOV,
         VRSettings.VrOptions.MIRROR_SCREENSHOT_CAMERA,
-        VRSettings.VrOptions.RELOAD_EXTERNAL_CAMERA,
+        VRSettings.VrOptions.RELOAD_EXTERNAL_CAMERA
     };
     private static final VRSettings.VrOptions[] UNDISTORTED_OPTIONS = new VRSettings.VrOptions[]{
         VRSettings.VrOptions.MONO_FOV,
